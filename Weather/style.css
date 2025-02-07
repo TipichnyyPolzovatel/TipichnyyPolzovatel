@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стили для контейнера поиска */
+.search-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 30px; /* Отступ между блоком поиска и блоком погоды */
+}
+
+.search-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-input img:first-child {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-input input {
+    padding: 10px 40px 10px 40px; /* Добавляем отступы для иконок и увеличиваем отступ слева */
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.search-input button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.search-input button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Стили для контейнера погоды */
+.weather-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    display: flex; /* Размещаем плитки горизонтально */
+    gap: 20px; /* Отступ между плитками */
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-weather-tile,
+.additional-weather-tile {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Обе плитки занимают равное пространство */
+    min-width: 0; /* Убираем минимальную ширину */
+}
+
+.main-weather-tile {
+    flex: 1.5; /* Больше места для основной плитки */
+}
+
+.temperature-container {
+    text-align: center;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+    color: #007BFF; /* Выделение температуры */
+}
+
+.feelsLike {
+    font-size: 14px;
+    color: #555;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+}
+
+.details-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dayTime {
+    font-size: 18px;
+    color: #333;
+}
+
+.location {
+    font-size: 16px;
+    color: #555;
+}
+
+.additional-weather-tile h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.additional-weather-tile p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Стили для контейнера прогноза погоды на неделю */
+.forecast-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.forecast-tiles {
+    display: flex;
+    justify-content: space-between; /* Равномерно распределяем плитки */
+    gap: 10px; /* Отступы между плитками */
+    margin-top: 20px;
+}
+
+.forecast-tile {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Плитки занимают равное пространство */
+    min-width: 0; /* Убираем минимальную ширину */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-tile h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.forecast-tile .date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.forecast-tile img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.forecast-tile p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.forecast-tile .temperature {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF; /* Выделение температуры */
+}
